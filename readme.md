@@ -28,7 +28,8 @@ Assumptions:
 1. Using aws to store and servers are aws instances
 2. Create a iam role for ec2 instance to push  logs to cw 
 
-1a. install cw logs agent to ec2 instance through packer/ansible, configure cw logs agent to upload files to a cw namespace/dimension edit retention of the log group to expire after 90 days
-1b. code a python lambda to trigger every day to create an export job for cw logs to s3. create a s3 lifecycle policy to shift logs to glacier 1 month. another lifecycle to delete the logs after 7 years. 
-1c. use either logrotate or auto_removal options on cw agent to reduce log sizes in the server.
+Answers:
+1. install cw logs agent to ec2 instance through packer/ansible, configure cw logs agent to upload files to a cw namespace/dimension edit retention of the log group to expire after 90 days
+2. code a python lambda to trigger every day to create an export job for cw logs to s3. create a s3 lifecycle policy to shift logs to glacier 1 month. another lifecycle to delete the logs after 7 years. 
+3. use either logrotate or auto_removal options on cw agent to reduce log sizes in the server.
 bonus: add a cw vpc endpoint to ec2's subnet
