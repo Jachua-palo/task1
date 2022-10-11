@@ -1,5 +1,5 @@
 ---
-title: Devops Assessment Answers
+Title: Devops Assessment Answers
 --- 
 
 Assumptions: 
@@ -9,8 +9,18 @@ Assumptions:
 
 Setup: 
 1. Open crontab of user that will trigger the script by typing crontab -e
-2. Place the following cron expression at the end of the file and save  0 * * * * /opt/try.sh
-3. On top of command add a MAILTO=<desired email target>
+2. Place the following cron expression using: 
+```bash
+crontab -e
+```
+At the end of the file and save:
+```bash
+0 * * * * /opt/try.sh <file location>
+```
+3. On top of command add a:
+```bash
+MAILTO=<desired email target>
+```
 
 Task1b:
 
