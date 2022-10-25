@@ -21,6 +21,12 @@ At the end of the file and save:
 ```bash
 MAILTO=<desired email target>
 ```
+OR
+
+use:
+```bash
+echo $body | mail -s "HTTP Error" no-reply@email.com
+```
 
 Task1b:
 
